@@ -18,7 +18,7 @@ import AddProduct from "../../Pages/Home/Dashboard/AddProduct/AddProduct";
 import MyProducts from "../../Pages/Home/Dashboard/MyProducts/MyProducts";
 import SellerRoute from "../SellerRoute/SellerRoute";
 import AllSellers from "../../Pages/Home/Dashboard/AllSellers/AllSellers";
-import AddProducts from "../../Pages/Shared/AddProducts/AddProducts";
+import AllProducts from '../../Pages/Shared/AllProducts/AllProducts'
 
  const router = createBrowserRouter([
     {
@@ -44,7 +44,7 @@ import AddProducts from "../../Pages/Shared/AddProducts/AddProducts";
             },
             {
                 path:'/category/:category_id',
-                element:<AddProducts></AddProducts>,
+                element:<PrivateRoute><AllProducts></AllProducts></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/category/${params.category_id}`)
             }
         ]

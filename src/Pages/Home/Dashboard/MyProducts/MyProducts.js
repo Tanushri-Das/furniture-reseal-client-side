@@ -20,22 +20,22 @@ const MyProducts = () => {
       return data;
     },
   });
-  // const handleProductDelete = id =>{
-  //   const proceed = window.confirm('Are you sure you want to delete this product?');
-  //   if(proceed){
-  //       fetch(`http://localhost:5000/product/${id}`,{
-  //           method:'DELETE'
-  //       })
-  //       .then(res => res.json())
-  //       .then(data=>{
-  //         console.log(data)
-  //         if(data.deletedCount > 0){
-  //             toast.success("Product deleted successfully");
-  //             refetch();
-  //         }
-  //     })
-  //   }
-  // }
+  const handleProductDelete = id =>{
+    const proceed = window.confirm('Are you sure you want to delete this product?');
+    if(proceed){
+        fetch(`http://localhost:5000/product/${id}`,{
+            method:'DELETE'
+        })
+        .then(res => res.json())
+        .then(data=>{
+          console.log(data)
+          if(data.deletedCount > 0){
+              toast.success("Product deleted successfully");
+              refetch();
+          }
+      })
+    }
+  }
   return (
     <div>
       <h3 className="text-4xl text-violet-600 text-center mb-12 font-bold">MyProducts</h3>
@@ -49,16 +49,17 @@ const MyProducts = () => {
               <th>Original Price</th>
               <th>Reseal Price</th>
               <th>Status</th>
+              <th>Select for Advertise</th>
               <th>Delete Product</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="mt-12">
             
             {
               product.map((products,i) =><tr key={products._id} products={products}>
                 <th>{i+1}</th>
                 <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
+              <div className="mask mask-squircle w-12 h-12 mt-5">
                 <img src={products?.image} alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
@@ -66,13 +67,16 @@ const MyProducts = () => {
                 <td>{products?.productoriginalprice}</td>
                 <td>{products?.productresealprice}</td>
                 <td>
-                  {!products?.soldstatus ? <h1>Avaiabnle</h1> : <h1>Sold</h1>}
+                  {!products?.soldstatus ? <h1>Avaiable</h1> : <h1>Sold</h1>}
                 </td>
-                {/* <td>
+                <td>
+                  <button className="btn">Select for Advertise</button>
+                </td>
+                <td>
                   <button onClick={()=>{handleProductDelete(products?._id)}} className="btn btn-error text-white">
                     Delete Product
                   </button>
-                </td> */}
+                </td>
 
               </tr>)
             }

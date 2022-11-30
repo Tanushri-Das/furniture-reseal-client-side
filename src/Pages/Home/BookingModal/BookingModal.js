@@ -1,12 +1,15 @@
 
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
 
 const BookingModal = ({product,setProduct}) => {
     const {productresealprice,productname,image,_id} = product;
+    console.log(product.image)
     
     const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
     let [changeText, setChangeText] = useState(true);
     const handleChange = () => {
       return setChangeText(!changeText);
@@ -16,7 +19,6 @@ const BookingModal = ({product,setProduct}) => {
         e.preventDefault();
         const form = e.target;
         const productname = form.productname.value;
-        const productImg = form.productImg.value;
         const username = form.username.value;
         const email = form.email.value;
         const price = form.price.value;
@@ -25,9 +27,9 @@ const BookingModal = ({product,setProduct}) => {
         
 
         const booking = {
-            productname,productImg,username,email,price,phone,location,productId:_id
+            productname,bookingImg:image,username,email,price,phone,location,productId:_id
         }
-        console.log(productImg)
+      
 
         fetch('http://localhost:5000/bookings',{
             method:"POST",
@@ -42,7 +44,7 @@ const BookingModal = ({product,setProduct}) => {
             if(data.acknowledged){
                 setProduct(null);
                 toast.success('Order is confirmed');
-                
+                navigate('/dashboard/myorders');
             }
            
         })
@@ -60,7 +62,7 @@ const BookingModal = ({product,setProduct}) => {
             ✕
           </label>
           <form onSubmit={handleBooking} className="grid grid-cols-1 gap-4 mt-5">
-            <img name="productImg" src={image} alt="" />
+           
           <input type="text" name="productname" disabled defaultValue={productname} className="text-xl font-semibold input input-bordered input-md w-full" />
           <input name="username" type="text" disabled defaultValue={user?.displayName} className="input input-bordered input-md w-full" />
           <input name="email" type="text" disabled defaultValue={user?.email} className="input input-bordered input-md w-full" />

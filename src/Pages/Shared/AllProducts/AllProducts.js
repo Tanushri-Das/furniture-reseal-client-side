@@ -25,7 +25,7 @@ const AddProducts = () => {
 
   return (
     <div className="my-20">
-      <h1 className="text-center">Each Category Product</h1>
+      <h1 className="text-center text-3xl mb-20 text-fuchsia-700 font-bold">Each Category Product</h1>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {categoriesAllData?.map((data) => (

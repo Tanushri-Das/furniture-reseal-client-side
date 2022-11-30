@@ -6,8 +6,9 @@
       "years_of_use":"4 years",
       "purchase":2018,
       "productname": "Bed",
+      "category":"Bed Room Furniture",
       "posted_time": "Wednesday, August 24, 2022",
-      "image": "https://ibb.co/zZbft6k",
+      "image": "http://admin.hatimfurniturebd.com/images/category/20181130_Bed_room_render.jpg",
       "productresealprice": 5000,
       "productoriginalprice": 12000,
       "email":"pujadas12@gmail.com",
@@ -22,8 +23,9 @@
       "years_of_use":"3 years",
       "purchase":2019,
       "productname": "Dinning Table",
+      "category":"Dinning Room Furniture",
       "posted_time": "Wednesday, September 10, 2022",
-      "image": "https://ibb.co/tMSC631",
+      "image": "https://images.othoba.com/images/thumbs/0348911_regal-stella-wooden-dining-table-antique.jpeg",
       "productresealprice": 30000,
       "email":"OviDatta56@gmail.com",
       "productoriginalprice": 37500,
@@ -38,8 +40,9 @@
       "sellername": "Noushin Ahmed",
       "years_of_use":"4 year",
       "productname": "Bed-side Table",
+      "category":"Bed Room Furniture",
       "posted_time": "Wednesday, August 12, 2022",
-      "image": "https://ibb.co/kQwgXBV",
+      "image": "https://hatil.com/sites/default/files/Runnel-121_0.jpg",
       "productresealprice": 3000,
       "purchase":2018,
       "email":"Noushin23@gmail.com",
@@ -54,8 +57,9 @@
       "sellername": "Anamika Datta",
       "years_of_use":"6 years",
       "productname": "Kitchen Cabinet",
+      "category":"Kitchen Furniture",
       "posted_time": "Wednesday, October 19, 2022",
-      "image": "https://ibb.co/Fngnyxw",
+      "image":"https://admin.regalfurniturebd.com/storage/uploads/fullsize/2022-06/gim-2.jpg",
       "productresealprice": 180000,
       "productoriginalprice": 25000,
       "purchase":2016,
@@ -71,8 +75,9 @@
       "sellername": "Sujon Paul",
       "years_of_use":"7 years",
       "productname": "China Cabinet or Cupboards",
+      "category":"Dinning Room Furniture",
       "posted_time": "Wednesday, August 7, 2022",
-      "image": "https://ibb.co/RY3gy8m",
+      "image": "https://foter.com/photos/420/traditional-large-china-cabinet.jpeg",
       "productresealprice": 21000,
       "purchase":2015,
       "productoriginalprice": 30000,
@@ -81,22 +86,6 @@
       "location": "Dhaka",
       "description": "A china cabinet is a piece of furniture, usually with glass fronts and sides, used to hold and display porcelain or other ceramics. Typical china held in such cabinets often includes cups, plates, bowls, and glasses."
     },
-    {
-      
-      "category_id": "01",
-      "sellername": "Mridul Das",
-      "years_of_use":"4 years",
-      "productname": "Wardrobe",
-      "posted_time": "Wednesday, October 24, 2022",
-      "purchase":2018,
-      "image": "https://ibb.co/XyyHqgx",
-      "productresealprice": 9000,
-      "productoriginalprice": 15000,
-      "email":"Mridul61@gmail.com",
-      "phone": "01986285738",
-      "location": "Dhaka",
-      "description": "A wardrobe or armoire or almirah is a standing closet used for storing clothes.Our wide ranges of wardrobes come in various sizes, shapes within a reasonable price.The Wardrobe is made of durable Veneered Engineered Wood that lasts longer and better withstands wear and tear, 600-pound weight limit."
-    },
 
     {
       
@@ -104,8 +93,9 @@
       "sellername": "Sumit Deb",
       "years_of_use":"3 years",
       "productname": "Kitchen Carts",
+      "category":"Kitchen Furniture",
       "posted_time": "Wednesday, October 29, 2022",
-      "image": "https://ibb.co/Yd0Rbym",
+      "image": "https://admin.regalfurniturebd.com/storage/uploads/fullsize/2022-06/gim-2.jpg",
       "productresealprice": 4000,
       "productoriginalprice": 6500,
       "email":"SumitDeb@gmail.com",
@@ -113,39 +103,7 @@
       "phone": "01567285738",
       "location": "Barishal",
       "description": "A kitchen Carts is a serving cart that can also be used for storage. A kitchen cart has wheels, or casters, on the bottom so that it can be easily moved around the kitchen or moved into other areas of the home such as to a patio or to the dining room."
-    },
-
-    {
-      
-      "category_id": "03",
-      "sellername": "Mhabuba Islam",
-      "years_of_use":"2 years",
-      "productname": "Dinning Chairs",
-      "posted_time": "Wednesday, August 24, 2022",
-      "image": "https://ibb.co/VvVnsDv",
-      "productresealprice": 17500,
-      "productoriginalprice": 24000,
-      "purchase":2020,
-      "email":"Mhabuba2345@gmail.com",
-      "phone": "01890285738",
-      "location": "Sylhet",
-      "description": "Dining chairs are not only used for sitting down to eat but also to enjoy a good gossip.One of the best features of these chairs is having a generous space to sit and relax. This cushioned and curved back rest is bound to tick all the boxes of practicality."
-    },
-
-    {
-      
-      "category_id": "02",
-      "sellername": "Ripon Das",
-      "years_of_use":"5 years",
-      "productname": "Baker Racks",
-      "posted_time": "Wednesday, June 22, 2022",
-      "image": "https://m.media-amazon.com/images/I/71wXntbqFqS._AC_SL1500_.jpg",
-      "productresealprice": 4200,
-      "productoriginalprice": 11000,
-      "email":"Ripon896@gmail.com",
-      "purchase":2017,
-      "phone": "01333285738",
-      "location": "Nobabgonj",
-      "description": "The baker's rack is a furniture piece with shelves used to keep baker's goods, such as hot pies, bread, and pastries cool. The baker's rack is made of wrought iron, steel, or other conductive metals. Heat can be moved from the pan to the baker's rack fast and retained there for a long period."
     }
+
+    
   ]

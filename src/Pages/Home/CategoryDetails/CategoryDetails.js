@@ -6,14 +6,17 @@ import SingleCatagory from '../SingleCategoryData/SingleCatagory';
 
 const CategoryDetails = () => {
   const categoriesAllData = useLoaderData();
-  console.log(categoriesAllData)
+  console.log(categoriesAllData);
+
 
   const [product,setProduct]=useState(null);
   let [changeText, setChangeText] = useState(true);
 
   return (
     <div className='my-20'>
-      <h1 className='text-center'>Each Category Product</h1>
+      <h1 className="text-3xl mx-auto text-center font-bold mb-12 w-96">
+        All Categories
+      </h1>
       <div className='flex justify-center'>
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           

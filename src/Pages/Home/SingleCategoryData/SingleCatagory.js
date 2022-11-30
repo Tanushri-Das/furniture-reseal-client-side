@@ -6,15 +6,27 @@ const SingleCatagory = ({ data, setProduct }) => {
     location,
     productresealprice,
     phone,
+    email,
     productname,
-    posted_time,
+    postedtime,
     sellername,
     image,
     productoriginalprice,
     purchase,
+   productquality,
     description,
   } = data;
 
+  // const { data: users= {} ,refetch} = useQuery({
+  //   queryKey: ["users","email"],
+  //   queryFn: async () => {
+  //     const res = await fetch(`http://localhost:5000/users?email=${data?.email}`);
+  //     const data = await res.json();
+      
+  //     return data;
+  //   },
+  // });
+  // console.log(users)
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
@@ -23,18 +35,19 @@ const SingleCatagory = ({ data, setProduct }) => {
 
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-full bg-base-100 h-[900px] shadow-xl">
         <img className="h-[300px]" src={image} alt="Shoes" />
         <div className="card-body">
-          <h2 className="card-title">Product Name : {productname}</h2>
-          <h2 className="card-title">Seller Name : {sellername}</h2>
-          <p>Location : {location}</p>
-          <h2 className="card-text">Purchase Year : {purchase}</h2>
-          <h2 className="card-text">Posted Time : {posted_time}</h2>
-          <p>Phone : {phone}</p>
-          <p>Product Details : {description}</p>
-          <p>Reseal price :{productresealprice}</p>
-          <p>Original price :{productoriginalprice}</p>
+          <h2 className="font-semibold">Product Name : {productname}</h2>
+          <h2 className="font-semibold">Seller Name : {sellername}</h2>
+          <p className="font-semibold">Location : {location}</p>
+          <h2 className="font-semibold">Purchase Year : {purchase}</h2>
+          <h2 className="font-semibold">Posted Time : {postedtime}</h2>
+          <p className="font-semibold">Phone : {phone}</p>
+          <p className="font-semibold">Product Quality : {productquality}</p>
+          <p className="font-semibold">Product Details : {description}</p>
+          <p className="font-semibold">Reseal price :{productresealprice}</p>
+          <p className="font-semibold">Original price :{productoriginalprice}</p>
           <div className="card-actions justify-center mt-6">
             <label onChange={handleClick}
               onClick={() => setProduct(data)}

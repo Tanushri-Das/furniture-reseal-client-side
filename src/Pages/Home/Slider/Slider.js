@@ -1,44 +1,32 @@
+
+
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaYoutube } from "react-icons/fa";
 
-import img1 from '../../../Assests/banner1.jpg';
-import img2 from '../../../Assests/banner2.jpg';
-import img3 from '../../../Assests/banner3.jpg';
-
-import SliderItem from './SliderItem';
-
-const sliderData = [
-    {
-        image: img1,
-        prev: 3,
-        id: 1,
-        next: 2
-    },
-    {
-        image: img2,
-        prev: 1,
-        id: 2,
-        next: 3
-    },
-    {
-        image: img3,
-        prev: 2,
-        id: 3,
-        next: 1
-    }
-  ]
 const Slider = () => {
-    return (
-        <div className="carousel w-full py-6">
-          {
-              sliderData.map(slide => <SliderItem key = {slide.id}
-                slide = {slide}>
-                
-              </SliderItem>)
-          }
-         
-         
-        </div>
-      );
+  return (
+    <div className="hero h-[600px] bg-slate-500 mt-20">
+  <div className="hero-content flex-col lg:flex-row-reverse">
+    <div>
+     <img className="w-96" src="https://media.istockphoto.com/id/1252414324/photo/green-sofa-on-white-background-with-a-plaid-and-pillow-3d-rendering.jpg?s=612x612&w=0&k=20&c=dOofzh_3PWjGLljiwPOXnXxpi4oENQTsOOuVgnsHBWc=" />
+     </div>
+     <div className='w-3/4'>
+      <h1 className="text-4xl font-bold text-white">Home <span className='text-fuchsia-500'>Decore</span></h1>
+       <p className="py-6 text-white text-xl">Ashley homestore is an online marketplace for all kinds of furnitures. Whether hunting for the perfact piece, or creating space for something new, ashley homestore make it easy to make a better choice for you.</p>
+       <button className="btn btn-warning btn-lg text-white text-xl">More info</button>
+       <div className='flex items-center mt-8'>
+          <img className='w-12' src="https://thumbs.dreamstime.com/b/call-icon-cdr-171462700.jpg" alt="" />
+          <h1 className="text-xl text-white ml-3">+8801646-471948</h1>
+       </div>
+       <div className='flex items-center mt-8'>
+          <img className='w-12' src="https://png.pngitem.com/pimgs/s/146-1466755_nearby-transparent-background-address-icon-hd-png-download.png" alt="" />
+          <h1 className="text-xl text-white ml-3">Bondor Bazar , Sylhet, Bangladesh</h1>
+       </div>
+     </div>
+  </div>
+</div>
+  )
 }
 
 export default Slider

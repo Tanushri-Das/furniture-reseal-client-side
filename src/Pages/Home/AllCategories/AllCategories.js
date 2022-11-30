@@ -14,17 +14,13 @@ const AllCategories = () => {
   }, []);
   return (
     <div className="my-20">
-      <h1 className="text-3xl mx-auto text-center font-bold mb-12 w-96">
-        All Categories : {allCategories.length}
-      </h1>
+      {/* <h1 className="text-3xl mx-auto text-center font-bold mb-12 w-96">
+        All Categories
+      </h1> */}
  
       <div className="lg:flex justify-center items-center ml-16">
         {allCategories.map((category) => (
-          // <button className="btn btn-primary mb-6 lg:block w-80 mr-6" key={category._id}>
-          //   <Link to={`/addproducts/${category.category_id}`}>
-          //     {category.category_name}
-          //   </Link>
-          // </button>
+          
           <button className="btn btn-primary mb-6 lg:block w-80 mr-6" key={category._id}>
             <Link to={`/category/${category.category_id}`}>
               {category.category_name}

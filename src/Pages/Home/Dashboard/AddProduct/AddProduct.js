@@ -49,7 +49,9 @@ console.log(user)
             productresealprice: data.productresealprice,
             sellername: data.sellername,
             email:data.email,
+            productquality:data.productquality,
             phone: data.phone,
+            postedtime:data.postedtime,
             location: data.location,
             category: data.category,
             description: data.description,
@@ -96,15 +98,17 @@ console.log(user)
                 <span className="label-text font-bold">Product ID</span>
               </label>
               <select
-                {...register("category_id")}
+                {...register("category_id",{
+                  required: "category id is required",
+                })}
                 className="select select-bordered w-full max-w-sm"
               >
-                <option disabled selected>
-                  Who shot first?
-                </option>
-                <option>01</option>
+                <option selected>01</option>
                 <option>02</option>
                 <option>03</option>
+                {errors.category_id && (
+                <p className="text-error">{errors.category_id?.message}</p>
+              )}
               </select>
             </div>
             <div className="form-control w-full">
@@ -118,11 +122,14 @@ console.log(user)
                 })}
                 className="input input-bordered w-full max-w-sm"
               />
-              {errors.name && (
-                <p className="text-error">{errors.name?.message}</p>
+              {errors.productname && (
+                <p className="text-error">{errors.productname?.message}</p>
               )}
             </div>
-            <div className="form-control w-full">
+            
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="form-control w-full">
               <label className="label">
                 <span className="label-text font-bold">Original Price</span>
               </label>
@@ -133,12 +140,10 @@ console.log(user)
                 })}
                 className="input input-bordered w-full max-w-sm"
               />
-              {errors.email && (
-                <p className="text-error">{errors.email?.message}</p>
+              {errors.productoriginalprice && (
+                <p className="text-error">{errors.productoriginalprice?.message}</p>
               )}
             </div>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="form-control w-full">
               <label className="label">
                 <span className="label-text font-bold">Reseal Price</span>
@@ -150,8 +155,8 @@ console.log(user)
                 })}
                 className="input input-bordered w-full max-w-sm"
               />
-              {errors.email && (
-                <p className="text-error">{errors.email?.message}</p>
+              {errors.productresealprice && (
+                <p className="text-error">{errors.productresealprice?.message}</p>
               )}
             </div>
             <div className="form-control w-full">
@@ -165,8 +170,8 @@ console.log(user)
                 })}
                 className="input input-bordered w-full max-w-sm"
               />
-              {errors.name && (
-                <p className="text-error">{errors.name?.message}</p>
+              {errors.sellername && (
+                <p className="text-error">{errors.sellername?.message}</p>
               )}
             </div>
             <div className="form-control w-full">
@@ -180,11 +185,48 @@ console.log(user)
                 })}
                 className="input input-bordered w-full max-w-sm"
               />
-              {errors.name && (
-                <p className="text-error">{errors.name?.message}</p>
+              {errors.email && (
+                <p className="text-error">{errors.email?.message}</p>
               )}
             </div>
           </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text font-bold">Product Quality</span>
+              </label>
+              <select
+                {...register("productquality",{
+                  required: "Product Quality is required",
+                })}
+                className="select select-bordered w-full max-w-sm"
+              >
+                
+                <option selected>Excellent</option>
+                <option>Good</option>
+                <option>Fair</option>
+                {errors.productquality && (
+                <p className="text-error">{errors.productquality?.message}</p>
+              )}
+              </select>
+            </div>
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text font-bold">Posted Time</span>
+              </label>
+              <input
+                type="text"
+                {...register("postedtime", {
+                  required: "Posted Time is required",
+                })}
+                className="input input-bordered w-full max-w-sm"
+              />
+              {errors.postedtime && (
+                <p className="text-error">{errors.postedtime?.message}</p>
+              )}
+            </div>
+          </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="form-control w-full">
               <label className="label">
@@ -195,8 +237,8 @@ console.log(user)
                 {...register("phone", { required: "phone number is required" })}
                 className="input input-bordered w-full max-w-sm"
               />
-              {errors.name && (
-                <p className="text-error">{errors.name?.message}</p>
+              {errors.phone && (
+                <p className="text-error">{errors.phone?.message}</p>
               )}
             </div>
             <div className="form-control w-full">
@@ -208,8 +250,8 @@ console.log(user)
                 {...register("location", { required: "Location is required" })}
                 className="input input-bordered w-full max-w-sm"
               />
-              {errors.name && (
-                <p className="text-error">{errors.name?.message}</p>
+              {errors.location && (
+                <p className="text-error">{errors.location?.message}</p>
               )}
             </div>
           </div>
@@ -219,7 +261,7 @@ console.log(user)
                 <span className="label-text font-bold">Product Category</span>
               </label>
               <select
-                {...register("category")}
+                {...register("category",{required:"catgory is required"})}
                 className="select select-bordered w-full max-w-sm"
               >
                 {categories?.map((category) => (
@@ -227,6 +269,9 @@ console.log(user)
                     {category.category_name}
                   </option>
                 ))}
+                {errors.category && (
+                <p className="text-error">{errors.category?.message}</p>
+              )}
               </select>
             </div>
             <div className="form-control w-full">
@@ -238,8 +283,8 @@ console.log(user)
                 {...register("purchase", { required: "Purchase is required" })}
                 className="input input-bordered w-full max-w-sm"
               />
-              {errors.name && (
-                <p className="text-error">{errors.name?.message}</p>
+              {errors.purchase && (
+                <p className="text-error">{errors.purchase?.message}</p>
               )}
             </div>
           </div>

@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+***5 Bullet Points
+*This can be able to order user Product in Website.User can pay the booking order payment through Stripe.
+*Seller will be able to add Product.Each product can be seen in each category product.The seller can see all the products to added him.
+*Whether the seller's added goods have been sold, it can see the seller.If not sold, then you will show available
+*Admin can see all buyers, all sellers.Admin can delete buyer.Admin can delete seller.Admin can Verify Seller.
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +74,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

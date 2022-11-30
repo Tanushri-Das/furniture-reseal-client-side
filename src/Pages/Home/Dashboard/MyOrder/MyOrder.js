@@ -21,6 +21,7 @@ const MyOrder = () => {
     },
   });
 
+
   return (
     <div>
       <h3 className="text-4xl text-orange-600 font-bold text-center mb-7">My Orders</h3>
@@ -36,14 +37,14 @@ const MyOrder = () => {
             </tr>
           </thead>
           <tbody>
-            {bookings?.map((booking,i) => (
+            {bookings && bookings.map((booking,i) => (
               <tr key={booking?._id}>
                 <th>{i+1}</th>
                 <td>
                 <div className="avatar">
                       <div className="mask mask-squircle w-12 h-12">
                         <img
-                          src="/tailwind-css-component-profile-2@56w.png"
+                          src={booking?.bookingImg}
                           alt="Avatar Tailwind CSS Component"
                         />
                       </div>

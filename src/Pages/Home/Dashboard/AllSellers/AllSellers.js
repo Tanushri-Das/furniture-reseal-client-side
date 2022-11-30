@@ -68,12 +68,13 @@ const AllSellers = () => {
                 <th>{i + 1}</th>
                 <td>{seller.name}</td>
                 <td>{seller.email}</td>
+                
                 <td>
-                  {verify ?<button
+                  {!seller.verify ?<button
                     onClick={() => handleMakeSeller(seller._id)}
                     className="btn btn-info text-white"
                   >
-                    Make Admin 
+                    Make Verify Seller
                   </button> : "Verified"}
                 </td>
                 <td>

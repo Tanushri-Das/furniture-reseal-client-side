@@ -33,6 +33,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        // navigate(from,{replace:true});
         setLoginUserEmail(data.email);
         
       })
@@ -45,7 +46,7 @@ const Login = () => {
     providerLogin(googleProvider)
     .then(result => {
       const user = result.user;
-      navigate(from,{replace:true});
+      setLoginUserEmail(user.email);
       console.log(user)
     })
     .catch(error => {
