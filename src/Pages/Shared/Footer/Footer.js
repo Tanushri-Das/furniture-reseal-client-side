@@ -1,35 +1,87 @@
 import React from "react";
+import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  
   const date = new Date().getFullYear();
-  
 
   return (
-    <footer className='mx-5 bg-slate-500 mb-12'>
-      <div className="footer  text-white">
-        <div className="mt-[74px] ml-36 lg:ml-20">
-          <span className="footer-title">Services</span>
-          <Link to='/' className="link link-hover text-lg">Emergency Checkup</Link>
-          <Link to='/' className="link link-hover text-lg">Monthly Checkup</Link>
-          <Link to='/' className="link link-hover text-lg">Weekly Checkup</Link>
-          <Link to='/' className="link link-hover text-lg">Deep Checkup</Link>
+    <footer className="p-24 bg-base-300 text-base-content">
+      <div className="footer">
+        <div>
+          <span className="footer-title text-xl">Services</span>
+          <a href="/" className="link link-hover text-lg">
+            Branding
+          </a>
+          <a href="/" className="link link-hover text-lg">
+            Design
+          </a>
+          <a href="/" className="link link-hover text-lg">
+            Marketing
+          </a>
+          <a href="/" className="link link-hover text-lg">
+            Advertisement
+          </a>
         </div>
-        <div className="mt-[74px] ml-36">
-          <span className="footer-title">Company</span>
-          <Link to='/' className="link link-hover text-lg">Fluoride Treatment</Link>
-          <Link to='/' className="link link-hover text-lg">Cavity Filling</Link>
-          <Link to='/' className="link link-hover text-lg">Teath Whitening</Link>
+        <div>
+          <span className="footer-title text-xl">Legal</span>
+          <a href="/" className="link link-hover text-lg">
+            Terms of use
+          </a>
+          <a href="/" className="link link-hover text-lg">
+            Privacy policy
+          </a>
+          <a href="/" className="link link-hover text-lg">
+            Cookie policy
+          </a>
         </div>
-        <div className="mt-[74px] ml-36">
-          <span className="footer-title">Legal</span>
-          <Link to='/' className="link link-hover text-lg">OUR ADDRESS</Link>
-          <p className="text-lg">New York - 101010 Hudson</p>
+        <div>
+          <span className="footer-title text-xl">Explore</span>
+          <a href="/" className="link link-hover text-lg">
+            Features
+          </a>
+          <a href="/" className="link link-hover text-lg">
+            Enterprise
+          </a>
+          <a href="/" className="link link-hover text-lg">
+            Security
+          </a>
+          <a href="/" className="link link-hover text-lg">
+            Pricing
+          </a>
+        </div>
+        <div>
+          <span className="footer-title text-xl">Social</span>
+          <div className="grid grid-flow-col gap-4">
+            <a
+              href="https://www.linkedin.com/in/tanushri-das-06a520194/"
+              target="_blank"
+            >
+              <FaLinkedin
+                className="text-4xl"
+                style={{ color: "#0A66C2" }}
+              ></FaLinkedin>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=xz729FOOk94&ab_channel=DWDocumentary"
+              target="_blank"
+            >
+              <FaYoutube
+                className="text-4xl"
+                style={{ color: "#FF0000" }}
+              ></FaYoutube>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <FaFacebook
+                className="text-4xl"
+                style={{ color: "#4267B2" }}
+              ></FaFacebook>
+            </a>
+          </div>
         </div>
       </div>
       <div className="text-center mt-24">
-        <p className="text-lg pb-16 text-white">Copyright © {date} - All right reserved</p>
+        <p className="text-lg">Copyright © {date} - All right reserved</p>
       </div>
     </footer>
   );
