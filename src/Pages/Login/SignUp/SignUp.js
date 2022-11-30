@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import signupImg from '../../../Assests/signup.webp'
 import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
+import useTitle from "../../../Hooks/useTitle";
 import useToken from "../../../Hooks/useToken";
 
 const SignUp = () => {

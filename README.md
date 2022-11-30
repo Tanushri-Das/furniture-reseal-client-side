@@ -5,7 +5,7 @@
 * Admin can see all buyers, all sellers.Admin can delete buyer.Admin can delete seller.Admin can Verify Seller.
 * If someone log in with Google , then by default he is a user.
 
-Live Site Link: 
+Live Site Link:https://furniture-reseal.web.app/ 
 Client Site Github Link:
 Server Site Github Link:
 
