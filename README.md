@@ -5,6 +5,19 @@
 * Admin can see all buyers, all sellers.Admin can delete buyer.Admin can delete seller.Admin can Verify Seller.
 * 
 
+Live Site Link: 
+Client Site Github Link:
+Server Site Github Link:
+
+Admin Email: dastanushri402@gmail.com
+Admin Password:TN12!@
+
+Seller Email:aariana12@gmail.com
+Seller Password:AA12!@
+
+
+
+
 <!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
