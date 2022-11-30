@@ -5,9 +5,9 @@
 * Admin can see all buyers, all sellers.Admin can delete buyer.Admin can delete seller.Admin can Verify Seller.
 * If someone log in with Google , then by default he is a user.
 
-Live Site Link:https://furniture-reseal.web.app/ 
-Client Site Github Link:
-Server Site Github Link:
+Live Site Link : https://furniture-reseal.web.app/ 
+Client Site Github Link : https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-Tanushri-Das
+Server Site Github Link : https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-Tanushri-Das
 
 Admin Email: dastanushri402@gmail.com
 Admin Password:TN12!@
@@ -15,6 +15,8 @@ Admin Password:TN12!@
 Seller Email:aariana12@gmail.com
 Seller Password:AA12!@
 
+Buyer Email : tama73468@gmail.com
+Buyer Password : TA12!@
 
 
 
