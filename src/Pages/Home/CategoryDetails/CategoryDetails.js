@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react'
-import { useLoaderData, useNavigate } from 'react-router-dom'
+import { useLoaderData, useLocation, useNavigate } from 'react-router-dom'
 import useTitle from '../../../Hooks/useTitle';
 import BookingModal from '../BookingModal/BookingModal';
 import SingleCatagory from '../SingleCategoryData/SingleCatagory';
@@ -12,7 +12,7 @@ const CategoryDetails = () => {
 
   const [product,setProduct]=useState(null);
   let [changeText, setChangeText] = useState(true);
-
+  const location = useLocation();
   return (
     <div className='my-20'>
       <h1 className="text-3xl mx-auto text-center font-bold mb-12 w-96">
