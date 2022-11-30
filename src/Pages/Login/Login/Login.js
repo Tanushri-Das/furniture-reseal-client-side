@@ -4,9 +4,11 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImg from "../../../Assests/login.webp";
 import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
+import useTitle from "../../../Hooks/useTitle";
 import useToken from "../../../Hooks/useToken";
 
 const Login = () => {
+  useTitle('login');
   const { login ,providerLogin} = useContext(AuthContext);
   const {
     register,

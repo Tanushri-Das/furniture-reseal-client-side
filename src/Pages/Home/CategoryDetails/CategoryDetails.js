@@ -12,7 +12,6 @@ const CategoryDetails = () => {
 
   const [product,setProduct]=useState(null);
   let [changeText, setChangeText] = useState(true);
-  const location = useLocation();
   return (
     <div className='my-20'>
       <h1 className="text-3xl mx-auto text-center font-bold mb-12 w-96">
@@ -22,7 +21,7 @@ const CategoryDetails = () => {
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           
           {
-            categoriesAllData?.map(data =><SingleCatagory key={data._id} data={data} setChangeText={setChangeText} changeText={changeText} setProduct={setProduct} state={{from:location}} replace></SingleCatagory>)
+            categoriesAllData?.map(data =><SingleCatagory key={data._id} data={data} setChangeText={setChangeText} changeText={changeText} setProduct={setProduct}></SingleCatagory>)
           }
           
       </div>
