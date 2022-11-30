@@ -63,7 +63,7 @@ const Footer = () => {
               ></FaLinkedin>
             </a>
             <a
-              href="https://www.youtube.com/watch?v=xz729FOOk94&ab_channel=DWDocumentary"
+              href="https://www.youtube.com/watch?v=ZvggB9FT4gM&ab_channel=MuseumofFineArts%2CBoston"
               target="_blank"
             >
               <FaYoutube
@@ -71,7 +71,7 @@ const Footer = () => {
                 style={{ color: "#FF0000" }}
               ></FaYoutube>
             </a>
-            <a href="https://www.facebook.com/" target="_blank">
+            <a href="https://www.facebook.com/tanushri.das01?mibextid=ZbWKwL" target="_blank">
               <FaFacebook
                 className="text-4xl"
                 style={{ color: "#4267B2" }}
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-24">
-        <p className="text-lg">Copyright © {date} - All right reserved</p>
+        <p className="text-xl text-indigo-500 font-semibold">Copyright © {date} - All right reserved</p>
       </div>
     </footer>
   );
