@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData, useNavigate } from 'react-router-dom'
 import useTitle from '../../../Hooks/useTitle';
 import BookingModal from '../BookingModal/BookingModal';
 import SingleCatagory from '../SingleCategoryData/SingleCatagory';
@@ -9,7 +9,6 @@ const CategoryDetails = () => {
  
   const categoriesAllData = useLoaderData();
   console.log(categoriesAllData);
-
 
   const [product,setProduct]=useState(null);
   let [changeText, setChangeText] = useState(true);
@@ -23,7 +22,7 @@ const CategoryDetails = () => {
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           
           {
-            categoriesAllData?.map(data =><SingleCatagory key={data._id} data={data} setChangeText={setChangeText} changeText={changeText} setProduct={setProduct}></SingleCatagory>)
+            categoriesAllData?.map(data =><SingleCatagory key={data._id} data={data} setChangeText={setChangeText} changeText={changeText} setProduct={setProduct} state={{from:location}} replace></SingleCatagory>)
           }
           
       </div>
