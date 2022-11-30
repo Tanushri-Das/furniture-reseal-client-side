@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-24">
-        <p className="text-xl text-indigo-500 font-semibold">Copyright © {date} - All right reserved</p>
+        <p className="text-lg lg:text-2xl text-indigo-500 font-semibold">Copyright © {date} - All right reserved</p>
       </div>
     </footer>
   );
