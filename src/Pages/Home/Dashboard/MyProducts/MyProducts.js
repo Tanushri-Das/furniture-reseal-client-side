@@ -49,7 +49,6 @@ const MyProducts = () => {
               <th>Original Price</th>
               <th>Reseal Price</th>
               <th>Status</th>
-              <th>Select for Advertise</th>
               <th>Delete Product</th>
             </tr>
           </thead>
@@ -67,11 +66,9 @@ const MyProducts = () => {
                 <td>{products?.productoriginalprice}</td>
                 <td>{products?.productresealprice}</td>
                 <td>
-                  {!products?.soldstatus ? <h1>Avaiable</h1> : <h1>Sold</h1>}
+                  {!products?.soldstatus ? <h1 className="text-2xl font-semibold">Avaiable</h1> : <h1 className="text-2xl font-semibold">Sold</h1>}
                 </td>
-                <td>
-                  <button className="btn">Select for Advertise</button>
-                </td>
+                
                 <td>
                   <button onClick={()=>{handleProductDelete(products?._id)}} className="btn btn-error text-white">
                     Delete Product

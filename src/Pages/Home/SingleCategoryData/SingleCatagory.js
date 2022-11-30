@@ -27,7 +27,7 @@ const SingleCatagory = ({ data, setProduct }) => {
 
   return (
     <div>
-      <div className="card w-full bg-base-100 h-[900px] shadow-xl">
+      <div className="card w-full bg-base-100 h-[950px] shadow-xl">
         <img className="h-[300px]" src={image} alt="Shoes" />
         <div className="card-body">
           <h2 className="font-semibold">Product Name : {productname}</h2>
