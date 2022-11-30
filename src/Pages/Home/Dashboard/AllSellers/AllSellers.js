@@ -50,7 +50,7 @@ const AllSellers = () => {
 
   return (
     <div>
-      <h3 className="text-4xl mb-7 text-red-900 font-bold text-center">All Sellers</h3>
+      <h3 className="text-4xl mb-7 text-red-900 font-bold text-center mt-16">All Sellers</h3>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>

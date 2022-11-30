@@ -3,7 +3,7 @@
 * Seller will be able to add Product.Each product can be seen in each category product.The seller can see all the products to added him.
 * Whether the seller's added goods have been sold, it can see the seller.If not sold, then you will show available
 * Admin can see all buyers, all sellers.Admin can delete buyer.Admin can delete seller.Admin can Verify Seller.
-
+* 
 
 <!-- # Getting Started with Create React App
 

@@ -3,12 +3,15 @@ import { Link, Outlet } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthProvider/AuthProvider";
 import useAdmin from "../Hooks/useAdmin";
 import useSeller from "../Hooks/useSeller";
+import useTitle from "../Hooks/useTitle";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
 
 const DashboardLayout = () => {
   const {user}=useContext(AuthContext)
   const [isAdmin] = useAdmin(user?.email);
   const [isSeller] = useSeller(user?.email)
+
+  useTitle('dashboard');
   return (
     <div>
       <Navbar></Navbar>

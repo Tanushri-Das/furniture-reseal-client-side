@@ -310,6 +310,7 @@ console.log(user)
               <p className="text-error">{errors.name?.message}</p>
             )}
           </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="form-control w-full">
             <label className="label">
               <span className="label-text font-bold">Photo</span>
@@ -337,6 +338,8 @@ console.log(user)
               <p className="text-error">{errors.name?.message}</p>
             )}
           </div>
+          </div>
+          
           <input
             type="submit"
             className="btn btn-primary w-full mt-5"
