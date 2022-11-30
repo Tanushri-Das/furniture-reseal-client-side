@@ -38,18 +38,18 @@ const MyProducts = () => {
   }
   return (
     <div>
-      <h3 className="text-4xl text-violet-600 text-center mb-12 font-bold">My Products</h3>
+      <h3 className="text-4xl text-violet-600 text-center mb-12 font-bold mt-20">My Products</h3>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
             <tr>
               <th></th>
-              <th>Product Image</th>
-              <th>Name</th>
-              <th>Original Price</th>
-              <th>Reseal Price</th>
-              <th>Status</th>
-              <th>Delete Product</th>
+              <th className="text-lg">Product Image</th>
+              <th className="text-lg">Name</th>
+              <th className="text-lg">Original Price</th>
+              <th className="text-lg">Reseal Price</th>
+              <th className="text-lg">Status</th>
+              <th className="text-lg">Delete Product</th>
             </tr>
           </thead>
           <tbody className="mt-12">
@@ -62,9 +62,9 @@ const MyProducts = () => {
                 <img src={products?.image} alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
-                <td>{products?.productname}</td>
-                <td>{products?.productoriginalprice}</td>
-                <td>{products?.productresealprice}</td>
+                <td className="font-semibold text-sm">{products?.productname}</td>
+                <td className="font-semibold text-sm">{products?.productoriginalprice}</td>
+                <td className="font-semibold text-sm">{products?.productresealprice}</td>
                 <td>
                   {!products?.soldstatus ? <h1 className="text-2xl font-semibold">Avaiable</h1> : <h1 className="text-2xl font-semibold">Sold</h1>}
                 </td>

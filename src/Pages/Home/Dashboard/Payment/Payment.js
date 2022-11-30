@@ -18,9 +18,9 @@ const Payment = () => {
 
   console.log("book", booking);
   return (
-    <div>
-      <h3 className="text-3xl">Payment for {booking.productname}</h3>
-      <p className="text-xl">Please pay {booking.price}</p>
+    <div className="m-20">
+      <h3 className="text-3xl text-purple-500 mt-28 font-semibold">Payment for {booking.productname}</h3>
+      <p className="text-xl text-amber-600 font-semibold mt-10">Please pay {booking.price}</p>
       <div className="w-96 my-12">
         <Elements stripe={stripePromise}>
           <CheckoutForm booking={booking}/>

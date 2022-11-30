@@ -12,17 +12,17 @@ const Navbar = () => {
     }
 
     const menuItems = <>
-    <li><Link to='/'>Home</Link></li>
-    <li><Link to='/blog'>Blog</Link></li>
-    <li><Link to='/dashboard'>Dashboard</Link></li>
+    <li className="text-2xl text-blue-900 font-semibold"><Link to='/'>Home</Link></li>
+    <li className="text-2xl text-blue-900 font-semibold"><Link to='/blog'>Blog</Link></li>
+    <li className="text-2xl text-blue-900 font-semibold"><Link to='/dashboard'>Dashboard</Link></li>
     {user?.uid?
       <>
-        <li><button onClick={handleLogOut}>Log Out</button></li>
+        <li className="text-2xl text-stone-900 font-semibold"><button onClick={handleLogOut}>Log Out</button></li>
       </>
-     : <li><Link to='/login'>Login</Link></li>}
+     : <li className="text-2xl text-stone-900 font-semibold"><Link to='/login'>Login</Link></li>}
     </>
   return (
-    <div className="navbar bg-base-100 flex justify-between">
+    <div className="navbar bg-sky-300 flex justify-between">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-       <Link to='/' className="btn btn-ghost normal-case text-xl">Ashley Homestore</Link> 
+       <Link to='/' className="btn btn-ghost normal-case text-2xl">Ashley <span className="text-orange-500 ml-2"> Homestore</span></Link> 
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">

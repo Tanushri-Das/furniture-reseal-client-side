@@ -82,7 +82,7 @@ console.log(user)
   }
   return (
     <div className="w-full p-7 mb-12">
-      <h3 className="text-4xl text-center mb-6 text-indigo-500 font-semibold">
+      <h3 className="text-4xl text-center mb-6 text-indigo-500 font-semibold mt-10">
         Add a Product
       </h3>
       <div
