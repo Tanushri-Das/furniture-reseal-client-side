@@ -6,14 +6,14 @@
 //   const { data: buyers = [] } = useQuery({
 //     queryKey: ["buyers"],
 //     queryFn: async () => {
-//       const res = await fetch("http://localhost:5000/buyers");
+//       const res = await fetch("https://furniture-reseal-server-side.vercel.app/buyers");
 //       const data = await res.json();
 //       return data;
 //     },
 //   });
 
 //   const handleMakeAdmin = id =>{
-//     fetch(`http://localhost:5000/buyers/admin/${id}`,{
+//     fetch(`https://furniture-reseal-server-side.vercel.app/buyers/admin/${id}`,{
 //         method:"PUT",
 //     })
 //     .then(res => res.json())
@@ -76,7 +76,7 @@ const AllBuyers = () => {
   const { data: allbuyer = [] ,refetch} = useQuery({
     queryKey: ["allbuyer"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/allbuyer");
+      const res = await fetch("https://furniture-reseal-server-side.vercel.app/allbuyer");
       const data = await res.json();
       return data;
     },
@@ -87,7 +87,7 @@ const AllBuyers = () => {
   const handleBuyerDelete = id =>{
     const proceed = window.confirm('Are you sure you want to delete this user?');
     if(proceed){
-        fetch(`http://localhost:5000/allbuyer/${id}`,{
+        fetch(`https://furniture-reseal-server-side.vercel.app/allbuyer/${id}`,{
             method:'DELETE'
         })
         .then(res => res.json())

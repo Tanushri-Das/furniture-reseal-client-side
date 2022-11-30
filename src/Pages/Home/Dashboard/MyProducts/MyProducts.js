@@ -7,7 +7,7 @@ const MyProducts = () => {
   const {user} = useContext(AuthContext);
   console.log(user);
 
-  const url = `http://localhost:5000/product?email=${user?.email}`;
+  const url = `https://furniture-reseal-server-side.vercel.app/product?email=${user?.email}`;
   const { data: product = [] ,refetch} = useQuery({
     queryKey: ["product", user?.email],
     queryFn: async () => {
@@ -23,7 +23,7 @@ const MyProducts = () => {
   const handleProductDelete = id =>{
     const proceed = window.confirm('Are you sure you want to delete this product?');
     if(proceed){
-        fetch(`http://localhost:5000/product/${id}`,{
+        fetch(`https://furniture-reseal-server-side.vercel.app/product/${id}`,{
             method:'DELETE'
         })
         .then(res => res.json())
@@ -38,7 +38,7 @@ const MyProducts = () => {
   }
   return (
     <div>
-      <h3 className="text-4xl text-violet-600 text-center mb-12 font-bold">MyProducts</h3>
+      <h3 className="text-4xl text-violet-600 text-center mb-12 font-bold">My Products</h3>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>

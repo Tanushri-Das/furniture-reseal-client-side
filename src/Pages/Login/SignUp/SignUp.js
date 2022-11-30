@@ -48,7 +48,7 @@ const handleSignUp = data =>{
 
 const saveUser = (name,email,role)=>{
   const user = {name,email,role};
-  fetch('http://localhost:5000/buyers',{
+  fetch('https://furniture-reseal-server-side.vercel.app/buyers',{
     method:"POST",
     headers:{
       'content-type':'application/json'
@@ -76,7 +76,7 @@ const handleGoogleSignIn = ()=>{
 }
 const saveGoogleUser = (name,email,role='Buyer')=>{
   const user = {name,email,role};
-  fetch('http://localhost:5000/buyers',{
+  fetch('https://furniture-reseal-server-side.vercel.app/buyers',{
     method:"POST",
     headers:{
       'content-type':'application/json'

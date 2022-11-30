@@ -7,7 +7,7 @@ const AllSellers = () => {
   const { data: allseller = [] ,refetch} = useQuery({
     queryKey: ["allseller"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/allseller");
+      const res = await fetch("https://furniture-reseal-server-side.vercel.app/allseller");
       const data = await res.json();
       return data;
     },
@@ -17,7 +17,7 @@ const AllSellers = () => {
     console.log(id)
     const proceed = window.confirm('Are you sure , you want to delete this seller?');
     if(proceed){
-        fetch(`http://localhost:5000/allseller/${id}`,{
+        fetch(`https://furniture-reseal-server-side.vercel.app/allseller/${id}`,{
             method:'DELETE'
         })
         .then(res => res.json())
@@ -32,7 +32,7 @@ const AllSellers = () => {
   }
 
   const handleMakeSeller = id =>{
-    fetch(`http://localhost:5000/buyers/Seller/${id}`,{
+    fetch(`https://furniture-reseal-server-side.vercel.app/buyers/Seller/${id}`,{
         method:"PUT",
         headers:{
             authorization:`bearer ${localStorage.getItem('accessToken')}`

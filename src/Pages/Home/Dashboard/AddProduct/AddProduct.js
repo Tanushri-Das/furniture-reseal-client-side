@@ -22,7 +22,7 @@ console.log(user)
   const { data: categories, isLoading } = useQuery({
     queryKey: ["category"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/categoriesname");
+      const res = await fetch("https://furniture-reseal-server-side.vercel.app/categoriesname");
       const data = await res.json();
       return data;
     },
@@ -54,12 +54,13 @@ console.log(user)
             postedtime:data.postedtime,
             location: data.location,
             category: data.category,
+            years_of_use:data.years_of_use,
             description: data.description,
             purchase: data.purchase,
             image: imgData.data.url,
           };
 
-          fetch("http://localhost:5000/product", {
+          fetch("https://furniture-reseal-server-side.vercel.app/product", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -278,8 +279,7 @@ console.log(user)
               <label className="label">
                 <span className="label-text font-bold">Year of Purchase</span>
               </label>
-              <input
-                value={new Date().getFullYear()}
+              <input type="text"
                 {...register("purchase", { required: "Purchase is required" })}
                 className="input input-bordered w-full max-w-sm"
               />
@@ -310,7 +310,6 @@ console.log(user)
               <p className="text-error">{errors.name?.message}</p>
             )}
           </div>
-
           <div className="form-control w-full">
             <label className="label">
               <span className="label-text font-bold">Photo</span>
@@ -321,6 +320,20 @@ console.log(user)
               className="input input-bordered w-full max-w-xs"
             />
             {errors.name && (
+              <p className="text-error">{errors.name?.message}</p>
+            )}
+          </div>
+
+          <div className="form-control w-full">
+            <label className="label">
+              <span className="label-text font-bold">Year of Use</span>
+            </label>
+            <input
+              type="text"
+              {...register("years_of_use", { required: "Year of Use is required" })}
+              className="input input-bordered w-full max-w-xs"
+            />
+            {errors.years_of_use && (
               <p className="text-error">{errors.name?.message}</p>
             )}
           </div>

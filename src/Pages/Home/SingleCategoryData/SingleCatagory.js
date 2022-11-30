@@ -15,18 +15,10 @@ const SingleCatagory = ({ data, setProduct }) => {
     purchase,
    productquality,
     description,
+ years_of_use
   } = data;
 
-  // const { data: users= {} ,refetch} = useQuery({
-  //   queryKey: ["users","email"],
-  //   queryFn: async () => {
-  //     const res = await fetch(`http://localhost:5000/users?email=${data?.email}`);
-  //     const data = await res.json();
-      
-  //     return data;
-  //   },
-  // });
-  // console.log(users)
+
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
@@ -44,6 +36,7 @@ const SingleCatagory = ({ data, setProduct }) => {
           <h2 className="font-semibold">Purchase Year : {purchase}</h2>
           <h2 className="font-semibold">Posted Time : {postedtime}</h2>
           <p className="font-semibold">Phone : {phone}</p>
+          <p className="font-semibold">Year of Use : { years_of_use}</p>
           <p className="font-semibold">Product Quality : {productquality}</p>
           <p className="font-semibold">Product Details : {description}</p>
           <p className="font-semibold">Reseal price :{productresealprice}</p>

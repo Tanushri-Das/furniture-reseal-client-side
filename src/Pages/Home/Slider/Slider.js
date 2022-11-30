@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 
 const Slider = () => {
   return (
-    <div className="hero h-[600px] bg-slate-500 mt-20">
+    <div className="hero h-[1200px] lg:h-[800px] bg-slate-500 mt-20">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div>
      <img className="w-96" src="https://media.istockphoto.com/id/1252414324/photo/green-sofa-on-white-background-with-a-plaid-and-pillow-3d-rendering.jpg?s=612x612&w=0&k=20&c=dOofzh_3PWjGLljiwPOXnXxpi4oENQTsOOuVgnsHBWc=" />

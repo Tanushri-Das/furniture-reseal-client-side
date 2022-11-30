@@ -45,7 +45,7 @@ import AllProducts from '../../Pages/Shared/AllProducts/AllProducts'
             {
                 path:'/category/:category_id',
                 element:<PrivateRoute><AllProducts></AllProducts></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/category/${params.category_id}`)
+                loader:({params})=>fetch(`https://furniture-reseal-server-side.vercel.app/category/${params.category_id}`)
             }
         ]
     },
@@ -77,7 +77,7 @@ import AllProducts from '../../Pages/Shared/AllProducts/AllProducts'
             {
                 path:'/dashboard/payment/:id',
                 element:<Payment></Payment>,
-                loader:({params})=>fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader:({params})=>fetch(`https://furniture-reseal-server-side.vercel.app/bookings/${params.id}`)
                
             }
         ]

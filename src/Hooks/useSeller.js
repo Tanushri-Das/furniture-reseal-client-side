@@ -5,7 +5,7 @@ const useSeller = email =>{
     const [isSellerLoading,setIsSellerLoading] = useState(true);
     useEffect(()=>{
         // if(email){
-        //     fetch(`http://localhost:5000/buyers/Seller/${email}`)
+        //     fetch(`https://furniture-reseal-server-side.vercel.app/buyers/Seller/${email}`)
         //     .then(res => res.json())
         //     .then(data =>{
         //         console.log(data);
@@ -14,7 +14,7 @@ const useSeller = email =>{
         //     })
         // }
         if(email){
-            fetch(`http://localhost:5000/buyers/Seller/${email}`)
+            fetch(`https://furniture-reseal-server-side.vercel.app/buyers/Seller/${email}`)
             .then(res => res.json())
             .then(data =>{
                 console.log(data);

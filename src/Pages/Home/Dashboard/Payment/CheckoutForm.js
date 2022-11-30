@@ -17,7 +17,7 @@ const CheckoutForm = ({ booking }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://furniture-reseal-server-side.vercel.app/create-payment-intent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -77,7 +77,7 @@ const CheckoutForm = ({ booking }) => {
         email,
         bookingId: _id,
       };
-      fetch("http://localhost:5000/payments", {
+      fetch("https://furniture-reseal-server-side.vercel.app/payments", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -100,7 +100,7 @@ const CheckoutForm = ({ booking }) => {
   };
 
   const handleSoldStatus = (id) => {
-    fetch(`http://localhost:5000/product/${id}`, {
+    fetch(`https://furniture-reseal-server-side.vercel.app/product/${id}`, {
       method: "PUT",
     })
       .then((res) => res.json())
@@ -114,7 +114,7 @@ const CheckoutForm = ({ booking }) => {
   };
 
   // const handleMakeSeller = id =>{
-  //   fetch(`http://localhost:5000/buyers/Seller/${id}`,{
+  //   fetch(`https://furniture-reseal-server-side.vercel.app/buyers/Seller/${id}`,{
   //       method:"PUT",
   //       headers:{
   //           authorization:`bearer ${localStorage.getItem('accessToken')}`
