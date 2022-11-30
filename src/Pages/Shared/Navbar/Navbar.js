@@ -22,7 +22,7 @@ const Navbar = () => {
      : <li className="text-2xl text-stone-900 font-semibold"><Link to='/login'>Login</Link></li>}
     </>
   return (
-    <div className="navbar bg-sky-300 flex justify-between">
+    <div className="navbar bg-sky-300 flex justify-between p-7">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

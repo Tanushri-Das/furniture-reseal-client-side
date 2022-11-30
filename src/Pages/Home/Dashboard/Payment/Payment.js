@@ -2,6 +2,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import React from "react";
 import { useLoaderData, useNavigation } from "react-router-dom";
+import useTitle from "../../../../Hooks/useTitle";
 import Loading from "../../../Loading/Loading";
 import CheckoutForm from "./CheckoutForm";
 
@@ -9,6 +10,9 @@ const stripePromise = loadStripe('pk_test_51M6DapDxINWxD62RCeOKdBqtU237MXrCZS049
 console.log(stripePromise)
 
 const Payment = () => {
+
+ useTitle('pay')
+
   const booking = useLoaderData();
   const navigation = useNavigation();
 

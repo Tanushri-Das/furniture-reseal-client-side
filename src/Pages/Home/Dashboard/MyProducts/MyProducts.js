@@ -66,7 +66,7 @@ const MyProducts = () => {
                 <td className="font-semibold text-sm">{products?.productoriginalprice}</td>
                 <td className="font-semibold text-sm">{products?.productresealprice}</td>
                 <td>
-                  {!products?.soldstatus ? <h1 className="text-2xl font-semibold">Avaiable</h1> : <h1 className="text-2xl font-semibold">Sold</h1>}
+                  {!products?.soldstatus ? <h1 className="text-xl font-semibold">Avaiable</h1> : <h1 className="text-xl font-semibold">Sold</h1>}
                 </td>
                 
                 <td>

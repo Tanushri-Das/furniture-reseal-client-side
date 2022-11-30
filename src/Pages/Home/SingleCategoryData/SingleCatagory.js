@@ -1,7 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
+import useTitle from "../../../Hooks/useTitle";
 
 const SingleCatagory = ({ data, setProduct }) => {
+
+  useTitle('Category Product');
+  
   const {
     location,
     productresealprice,

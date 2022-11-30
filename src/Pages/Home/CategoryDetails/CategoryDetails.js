@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
+import useTitle from '../../../Hooks/useTitle';
 import BookingModal from '../BookingModal/BookingModal';
 import SingleCatagory from '../SingleCategoryData/SingleCatagory';
 
 const CategoryDetails = () => {
+ 
   const categoriesAllData = useLoaderData();
   console.log(categoriesAllData);
 
